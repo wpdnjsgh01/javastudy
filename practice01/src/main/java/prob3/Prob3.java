@@ -8,7 +8,26 @@ public class Prob3 {
 
 		Scanner scanner = new Scanner(System.in);
 
-		/* 코드 작성 */
+		int num = scanner.nextInt();
+		int rst = 0;
+		
+		if(num % 2 == 0) {
+			for(int i = 0; i <= num; i++) {
+				if(i % 2 == 0) {
+					rst += i;
+				}
+			}
+		}
+		
+		if(num % 2 == 1) {
+			for(int i = 0; i <= num; i++) {
+				if(i % 2 == 1) {
+					rst += i;
+				}
+			}
+		}
+
+		System.out.println(rst);
 		
 		scanner.close();
 	}
