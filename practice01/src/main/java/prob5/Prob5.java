@@ -11,7 +11,10 @@ public class Prob5 {
 			if(i % 10 == 3 || i % 10 == 6 || i % 10 == 9) {
 				System.out.println(i + " 짝");
 			}
+	
 		}
+		
+		//clear
 		
 	}
 }
