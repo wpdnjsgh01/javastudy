@@ -13,7 +13,7 @@ public class Prob4 {
 		for(int i = 0; i < text.length(); i++) {
 			System.out.println(text.substring(0, i+1));
 		}
-		
+		//clear
 		scanner.close();
 	}
 
