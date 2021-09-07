@@ -1,16 +1,15 @@
-#JAVA Study
----------------------------------
-##practice01
+## JAVA STUDY
+
+### practice01
 자바 기본 프로그래밍 연습1
-	
-```
+
+``` java
 public class HelloWorld{
-	System.out.println("Hello world!");
 }
 ```
-	
-##practice02
+
+### practice02
 자바 기본 프로그래밍 연습2
-	
-##practice03
-자바 기본 프로그래밍 연습3
+
+### chapter03
+객체지향 프로그래밍 수업 정리
