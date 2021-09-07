@@ -28,7 +28,7 @@ public class Prob3 {
 		}
 
 		System.out.println(rst);
-		
+		//clear
 		scanner.close();
 	}
 }
