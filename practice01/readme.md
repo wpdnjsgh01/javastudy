@@ -1,6 +1,6 @@
-##JAVA Study
+#JAVA Study
 ---------------------------------
-###practice01
+##practice01
 자바 기본 프로그래밍 연습1
 	
 ```
@@ -9,8 +9,8 @@
 	}
 ```
 	
-###practice02
+##practice02
 자바 기본 프로그래밍 연습2
 	
-###practice03
+##practice03
 자바 기본 프로그래밍 연습3
