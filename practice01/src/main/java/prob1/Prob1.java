@@ -15,7 +15,7 @@ public class Prob1 {
 		else {
 			System.out.println("3의 배수가 아닙니다");
 		}
-		
+		//clear
 		scanner.close();
 	}
 }
