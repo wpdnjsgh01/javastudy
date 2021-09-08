@@ -17,7 +17,7 @@ public class Prob01 {
 
 			cnt = insert / MONEY[i];
 
-			System.out.println(MONEY[i]+"원권 / "+cnt+"매");
+			System.out.println(MONEY[i]+"원권 / " + cnt + "매");
 
 			insert = insert - ( cnt * MONEY[i] );
 
