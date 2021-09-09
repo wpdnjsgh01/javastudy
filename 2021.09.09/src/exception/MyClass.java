@@ -1,0 +1,28 @@
+package exception;
+
+import java.io.*;
+
+public class MyClass {
+
+	public MyClass() {
+		
+	}
+
+	public void danger() throws IOException, MyException {
+		System.out.println("some code1...");
+		System.out.println("some code2...");
+		
+		if(true){
+			throw new MyException();
+		}
+		
+		if (true) {
+			throw new IOException();
+		}
+		
+		System.out.println("some code3...");
+		System.out.println("some code4...");
+		
+	}
+	
+}

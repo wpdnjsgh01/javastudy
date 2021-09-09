@@ -42,11 +42,18 @@ public class Book {
 	
 	public void rent() {
 		this.stateCode = 0;
-		System.out.println(this.title + "이(가) 대여되었습니다.");
+		System.out.println(this.getTitle() + "이(가) 대여 됐습니다.");
 	}
-	
+
 	public void print() {
+	
+		if(getStateCode() == 0) {
+			System.out.println("책 제목 : " + getTitle() + ", 작가 : " + getAuthor() + ", 대여 유무 : 대여중");
+		}
+		else {
+			System.out.println("책 제목 : " + getTitle() + ", 작가 : " + getAuthor() + ", 대여 유무 : 재고있음" );
+		}
 		
 	}
-	
+
 }
