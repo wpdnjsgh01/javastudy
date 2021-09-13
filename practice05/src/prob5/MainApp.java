@@ -1,7 +1,5 @@
 package prob5;
 
-import java.util.EmptyStackException;
-
 public class MainApp {
 
 	public static void main(String[] args) {
