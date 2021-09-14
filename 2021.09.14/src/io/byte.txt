@@ -1,0 +1,39 @@
+package io;
+
+import java.io.*;
+
+public class ByteExam01 {
+
+	public static void main(String[] args) {
+
+		FileInputStream fis = null;
+		FileOutputStream fos = null;
+		
+		try {
+			fis = new FileInputStream("src/io/ByteExam01.java");
+			fos = new FileOutputStream("src/io/byte.txt");
+			
+			int readData = -1;
+			
+			while((readData = fis.read()) != -1) {
+				fos.write(readData);
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				fis.close();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+			try {
+				fos.close();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+		
+	}
+
+}

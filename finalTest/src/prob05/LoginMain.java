@@ -33,9 +33,46 @@ public class LoginMain {
 		} finally {
 			scanner.close();
 		}
+		
 	}
 	
-	public static void login(List<User> users, User user ){
-		/* 코드 작성 */
+	public static void login(List<User> users, User user){
+		//users. size = 4
+		int i = 0;
+		
+		while(i < 4) {
+			
+			String str1 = users.get(i).getId();
+			String str2 = user.getId();
+			String str3 = users.get(i).getPassword();
+			String str4 = user.getPassword();
+			
+			if(str1 == str2) {
+				System.out.println("1단계");
+				if(str3 == str4) {
+					System.out.println("2단계");
+					break;
+				}
+			}
+			
+			if(users.get(i).getId() != user.getId()) {
+				System.out.println("3단계");
+				i++;
+				continue;
+			}
+			
+			if(users.get(i).getPassword() != user.getPassword()) {
+				System.out.println("4단계");
+				i++;
+				continue;
+			}
+			
+			if(i == 3) {
+				throw new UserNotFoundException();
+			}
+			
+		}
+		
 	}
+	
 }

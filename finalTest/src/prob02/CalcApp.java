@@ -29,7 +29,8 @@ public class CalcApp {
 			
 			/* 코드 작성 */
 			String symbol = tokens[2];
-			int result = arithmetic.calculate(lValue, rValue);
+			int result = 0;
+			//int result = arithmetic.calculate(lValue, rValue);
 			
 			Arithmetic add = new Add();
 			Arithmetic div = new Div();

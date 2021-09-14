@@ -12,9 +12,9 @@ public class Gugudan {
 
 		resultNumber = l * r;
 
-		int[] answerNumbers = randomizeAnswers(); //정수 배열 생성
-		int loc = randomize(0, 8); //0 ~ 8 까지의 숫자를 구해서 넣을 주소를 정해준다
-		answerNumbers[loc] = resultNumber; //정수 배열[주소값] = 곱한 값
+		int[] answerNumbers = randomizeAnswers(); // 정수 배열 생성
+		int loc = randomize(0, 8); // 0 ~ 8 까지의 숫자를 구해서 넣을 주소를 정해준다
+		answerNumbers[loc] = resultNumber; // 정수 배열[주소값] = 곱한 값
 
 		System.out.println(l + " x " + r + " = ?");
 
@@ -37,41 +37,36 @@ public class Gugudan {
 		s.close();
 
 		System.out.println((answer == resultNumber) ? "정답" : "오답");
-		
+
 	}
 
-	
-	
-	
 	private static int randomize(int lNum, int rNum) {
 		int random = (int) (Math.random() * rNum) + lNum;
-		
+
 		return random;
 	}
-	
-	private static int[] randomizeAnswers(){
+
+	private static int[] randomizeAnswers() {
 		/* 코드 작성(수정 가능) */
 		final int COUNT_ANSWER_NUMBER = 9;
 		int[] boardNumbers = new int[COUNT_ANSWER_NUMBER];
-		
-		
-		
+
 		HashSet<Integer> set = new HashSet<>();
-		
-		while(set.size() < 9) {
-			
+
+		while (set.size() < 9) {
+
 			int one = randomize(1, 9);
 			int two = randomize(1, 9);
-			
+
 			int rst = one * two;
-			
-			if(resultNumber != rst) {
+
+			if (resultNumber != rst) {
 				set.add(rst);
 			}
-			
+
 		}
-		
+
 		return set.stream().sorted().mapToInt(Integer::intValue).toArray();
-		
+
 	}
 }
