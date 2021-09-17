@@ -15,6 +15,18 @@ public class TCPClient {
 			// 1. 소켓 생성
 			socket = new Socket();
 
+			int rcv = socket.getReceiveBufferSize();
+			int snd = socket.getSendBufferSize();
+			System.out.println(rcv + " : " + snd);
+			
+			socket.setReceiveBufferSize(1024 * 10);
+			socket.setSendBufferSize(1024 * 10);
+			rcv = socket.getReceiveBufferSize();
+			snd = socket.getSendBufferSize();
+			System.out.println(rcv + " : " + snd);
+			
+			socket.setTcpNoDelay(true);
+			
 			// 2. 서버 연결
 			socket.connect(new InetSocketAddress(SERVER_IP, SERVER_PORT));
 			//InetSocketAddress
