@@ -1,1 +1,1 @@
-# javastudy/network/src/main/java/Multitest == 채팅프로그램
+# javastudy/network/src/main/java/test2 == 채팅프로그램
