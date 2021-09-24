@@ -1,1 +1,1 @@
-#  javastudy\network\target\classes\Multitest 폴더에 있는 4개 클라슥가 채팅프로그램입니다.
+#  javastudy/tree/master/network/src/main/java/Multitest == 채팅프로그램
