@@ -16,9 +16,11 @@ public class ToClientThread extends Thread {
 		try {
 			
 			BufferedReader reader = new BufferedReader(new InputStreamReader(socket.getInputStream(), "UTF-8"));
+			String inputString;
 			
-			while(true) { 
-				System.out.println(reader.readLine());
+			while((inputString = reader.readLine()) != null) { 
+				System.out.println(inputString);
+				
 			}
 			
 		} catch (Exception e) {

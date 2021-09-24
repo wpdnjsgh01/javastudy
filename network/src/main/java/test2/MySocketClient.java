@@ -11,7 +11,7 @@ public class MySocketClient {
 		
 		try {
 			
-			socket = new Socket("218.154.207.14", 60000); 
+			socket = new Socket("127.0.0.1", 60000); 
 			System.out.println("연결되었습니다.");
 			
 			//항상 값을 클라이언트로 보내주는 쓰레드

@@ -30,7 +30,7 @@ public class MySocketServer extends Thread {
 			String name = null;
 			int chgStat = 0;
 
-			while ((inputString = reader.readLine()) != null || (inputString = reader.readLine()) != " ") {
+			while ((inputString = reader.readLine()) != null) {
 
 				if (chgStat == 0) {
 					name = inputString;
@@ -38,19 +38,28 @@ public class MySocketServer extends Thread {
 					chgStat++;
 					continue;
 				}
-
+				
+				/*
 				if ("exit".equals(inputString)) {
 					for (int i = 0; i < LoginedUserList.size(); i++) {
 						out = LoginedUserList.get(i).getOutputStream();
 						writer = new PrintWriter(out, true);
 						writer.println(name + "님이 퇴장하셨습니다.");
-						
 						break;
 					}
 				}
-
+				*/
+				
+				if ("exit".equals(inputString)) {
+						writer.println(name + "님이 퇴장하셨습니다.");
+						break;
+				}
+				
 				for (int i = 0; i < LoginedUserList.size(); i++) {
 					out = LoginedUserList.get(i).getOutputStream();
+					if(socket.isClosed() == true) {
+						break;
+					}
 					writer = new PrintWriter(out, true);
 					writer.println(name + " : " + inputString);
 				}

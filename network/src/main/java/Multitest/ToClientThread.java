@@ -17,12 +17,10 @@ public class ToClientThread extends Thread { // 서버에서 보낸 메세지 �
 	
 	public void run() {
 		try {
-			// InputStream - Server에서 보낸 메세지를 클라이언트로 가져옴
-			InputStream input = socket.getInputStream();
-            		// socket의 InputStream 정보를 InputStream in에 넣은 뒤
-			BufferedReader br = new BufferedReader(new InputStreamReader(input));
+			InputStream in = socket.getInputStream();
+			BufferedReader br = new BufferedReader(new InputStreamReader(in));
 
-			while(true) { // 무한반복
+			while(true) {
 				System.out.println(br.readLine());
 			}
 			

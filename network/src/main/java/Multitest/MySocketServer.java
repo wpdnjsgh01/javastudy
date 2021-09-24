@@ -22,7 +22,7 @@ public class MySocketServer extends Thread {
 		
 			System.out.println(socket.getInetAddress() + "에 연결되었습니다.");
 
-			InputStream input = socket.getInputStream();
+			InputStream in = socket.getInputStream();
 			BufferedReader reader = new BufferedReader(new InputStreamReader(socket.getInputStream(), "UTF-8"));
 
 			OutputStream out = socket.getOutputStream();
@@ -31,7 +31,7 @@ public class MySocketServer extends Thread {
 			writer.println(">사용할 ID를 입력하십시오.");
 
 			String readValue; // Client에서 보낸 값 저장
-			String name = null; // 클라이언트 이름 설정용
+			String name = null; // 클라이언트 이름 설정
 			int identify = 0;
 
 			while ((readValue = reader.readLine()) != null) {

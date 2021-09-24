@@ -11,7 +11,7 @@ public class MySocketClient {
 		try {
 			Socket socket = null;
             		// 소켓 서버에 접속
-			socket = new Socket("218.154.207.14", 60000); 
+			socket = new Socket("127.0.0.1", 60000); 
 			System.out.println("접속 성공"); // 접속 확인용
 			
             		// 서버에서 보낸 메세지 읽는 Thread
