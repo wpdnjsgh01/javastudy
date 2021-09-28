@@ -13,7 +13,7 @@ public class StackTest {
 		
 		while(!s.empty()) {
 			String str = s.pop();
-			String str = s.peek();
+		//	String str = s.peek();
 			System.out.println(str);
 		}
 	

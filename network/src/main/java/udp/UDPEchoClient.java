@@ -35,9 +35,8 @@ public class UDPEchoClient {
 				DatagramPacket sndPacket = new DatagramPacket(sndData, sndData.length, new InetSocketAddress(SERVER_IP, SERVER_PORT));
 				socket.send(sndPacket);
 				
-				DatagramPacket rcvPacket = new DatagramPacket(new byte[BUFFER_SIZE], BUFFER_SIZE);
+				//DatagramPacket rcvPacket = new DatagramPacket(new byte[BUFFER_SIZE], BUFFER_SIZE);
 				
-				byte[] rcvDa
 			}
 			
 		} catch (Exception e) {
