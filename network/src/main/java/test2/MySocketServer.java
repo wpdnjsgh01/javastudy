@@ -52,6 +52,7 @@ public class MySocketServer extends Thread {
 				
 				if ("exit".equals(inputString)) {
 						writer.println(name + "님이 퇴장하셨습니다.");
+						socket.close();
 						break;
 				}
 				
@@ -64,8 +65,8 @@ public class MySocketServer extends Thread {
 					writer.println(name + " : " + inputString);
 				}
 			}
-		} catch (Exception e) {
-			e.printStackTrace();
+		} catch (IOException e) {
+			System.out.println("종료되었습니다.");
 		} finally {
 			try {
 				if (socket.equals(null)) {
